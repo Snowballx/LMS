@@ -20,7 +20,7 @@
         <td><%= book.author %></td>
         <td><%= book.title %></td>
         <td><%= book.description %></td>
-        <td><%= rating_for book, 'rating' ,disable_after_rate:false%></td>
+        <td><%= rating_for book, 'rating' ,disable_after_rate:true%></td>
         <td><%= book.book_category %></td>
         <td><%= book.user.email %></td>
         <td><%= link_to 'Show', book %></td>

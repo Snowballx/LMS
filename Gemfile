@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
+#Use cloudinary for cloud image db
+gem 'cloudinary'
+#Use carrierwave for image file upload
+# gem 'carrierwave'
 #For rating system
+gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem 'ratyrate'
 #Using devise for authentication
 gem 'devise'

@@ -6,9 +6,11 @@
     <%= f.input :title %>
     <%= f.input :description %>
     <%= f.input :book_category %>
-    <%= rating_for book, 'rating' ,disable_after_rate:false%>
-
+    <%= rating_for book, 'rating' ,disable_after_rate:true%>
+    <%= f.input :image, as: :file%>
   </div>
+
+
 
   <div class="form-actions">
     <%= f.button :submit %>
