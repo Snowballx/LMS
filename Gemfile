@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'record_tag_helper', '~> 1.0'
 #Use cloudinary for cloud image db
 gem 'cloudinary'
 #Use carrierwave for image file upload

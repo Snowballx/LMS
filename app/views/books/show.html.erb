@@ -24,11 +24,23 @@
   <strong>User:</strong>
   <%= @book.user.email %>
 </p>
-<p> <%= rating_for @book, 'rating' ,disable_after_rate:true%>
+
+<p> <%= rating_for @book, 'rating' ,disable_after_rate:true%></p>
+
+<p> <%= image_tag(@book.image_url) %></p>
+
+
+<p><%= form_for [@book, Comment.new] do |f| %>
+    <p>
+      <%= f.label :body, "New comment" %><br/>
+      <%= f.text_area :body %>
+    </p>
+    <p><%= f.submit "Add comment" %></p>
 </p>
-<p>
-  <%= image_tag(@book.image_url) %>
-</p>
+
+<p><%= render @comments %></p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
+
+<% end %>
