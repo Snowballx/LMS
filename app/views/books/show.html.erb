@@ -1,13 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @book.author %>
-</p>
+<div class="image-container">
+<p> <%= image_tag((@book.image_url), :class => 'image') %></p>
+</div>
 
 <p>
   <strong>Title:</strong>
   <%= @book.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
 </p>
 
 <p>
@@ -26,9 +30,6 @@
 </p>
 
 <p> <%= rating_for @book, 'rating' ,disable_after_rate:true%></p>
-
-<p> <%= image_tag(@book.image_url) %></p>
-
 
 <p><%= form_for [@book, Comment.new] do |f| %>
     <p>
